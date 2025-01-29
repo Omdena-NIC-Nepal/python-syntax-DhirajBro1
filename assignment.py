@@ -126,7 +126,3 @@ def bitwise_ops(a, b):
     
     return result
     pass
-#Test OF PART 1
-print (format_string("Ram", 27))
-print (format_string("Sita", 25))
-print ( conditional_check(8))
