@@ -7,7 +7,9 @@ def format_string(name, age):
     Returns:
         str: Formatted string
     """
+    return f"My name is {name} and I am {age} years old"
     pass
+
 
 def conditional_check(number):
     """
@@ -17,7 +19,14 @@ def conditional_check(number):
     Returns:
         str: "Greater", "Lesser", or "Equal"
     """
+    if number > 10:
+        return "Greater"
+    elif number < 10:
+        return "Lesser"
+    else:
+        return "Equal"
     pass
+
 
 def loop_sum(n):
     """
@@ -27,7 +36,12 @@ def loop_sum(n):
     Returns:
         int: Sum of numbers
     """
+    sum=0
+    for i in range(1,n+1):
+     sum=i + sum
+    return sum
     pass
+
 
 def list_operations(numbers):
     """
@@ -37,6 +51,7 @@ def list_operations(numbers):
     Returns:
         tuple: (sum, max, min)
     """
+    return(sum(numbers),max(numbers),min(numbers))
     pass
 
 def dict_operations(students_dict):
@@ -47,7 +62,9 @@ def dict_operations(students_dict):
     Returns:
         list: Names of students with scores > 80
     """
+    return [name for name, score in students_dict.items() if score > 80]
     pass
+
 
 def set_operations(list1, list2):
     """
@@ -58,6 +75,7 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
+    return set(list1) & set(list2)
     pass
 
 def arithmetic_ops(a, b):
@@ -69,6 +87,12 @@ def arithmetic_ops(a, b):
     Returns:
         dict: Results of arithmetic operations
     """
+    result={"sum" : a+b , "difference" : a-b ,"product":a*b}
+    if b != 0:
+        result["quotient"]= a/b
+    else:
+        result["quotient"]="undefined"
+    return result
     pass
 
 def logical_ops(x, y):
@@ -80,7 +104,10 @@ def logical_ops(x, y):
     Returns:
         dict: Results of logical operations
     """
+    result = {'and': x and y,'or': x or y,'not_x': not x}
+    return result
     pass
+
 
 def bitwise_ops(a, b):
     """
@@ -91,4 +118,11 @@ def bitwise_ops(a, b):
     Returns:
         dict: Results of bitwise operations
     """
+    result = {
+        'and': a & b,  
+        'or': a | b,  
+        'xor': a ^ b   
+    }
+    
+    return result
     pass
