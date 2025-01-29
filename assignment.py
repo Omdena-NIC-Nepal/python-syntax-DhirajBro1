@@ -24,7 +24,7 @@ def conditional_check(number):
     elif number < 10:
         return "Lesser"
     else:
-        return "equal"
+        return "Equal"
     pass
 
 
@@ -75,7 +75,7 @@ def set_operations(list1, list2):
     Returns:
         set: Common elements
     """
-    return list1 & list2
+    return set(list1) & set(list2)
     pass
 
 def arithmetic_ops(a, b):
